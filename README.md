@@ -1,3 +1,3 @@
 # Start of development
 
-Live [text](https://gghub.ru/)
+Live [demo - gghub.ru](https://gghub.ru/)
