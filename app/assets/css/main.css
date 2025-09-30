@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+:root {
+  --stripe-color: #fff;
+  --bg: var(--stripe-color);
+  --maincolor: var(--bg);
+}
+
 .html,
 body {
   @apply bg-gray-800 text-gray-200;

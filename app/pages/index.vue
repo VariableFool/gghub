@@ -1,8 +1,10 @@
 <template>
   <section class="h-screen text-blue-500 flex items-center">
     <div class="mx-auto px-4 py-20 text-center">
-      <p class="text-3xl md:text-5xl font-bold max-w-3xl mx-auto">
-        Платформа для разработчиков и технологических энтузиастов
+      <p
+        class="text-4xl md:text-7xl font-bold max-w-3xl bg-gradient-to-b from-blue-600 via-white to-yellow-600 bg-clip-text text-transparent pb-3"
+      >
+        Full-stack разработка <br />и 1С решения
       </p>
     </div>
   </section>

@@ -1,18 +1,15 @@
 <template>
   <nav
-    class="bg-gray-950/60 backdrop-blur-sm shadow-lg fixed z-10 mt-4 rounded-3xl ring-1 ring-gray-700 left-1/2 translate-x-[-50%]"
+    class="bg-gray-900/80 backdrop-blur-sm shadow-lg fixed z-10 mt-4 rounded-full ring-1 ring-gray-700 left-1/2 translate-x-[-50%]"
   >
     <div class="container mx-auto px-6">
       <div class="flex justify-between items-center py-4 gap-6">
-        <!-- <NuxtLink
+        <NuxtLink
           to="/"
-          class="text-2xl text-blue-400 font-bold hover:text-blue-300 transition-colors"
+          class="text-2xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-red-600 bg-clip-text text-transparent"
         >
           GGHUB
-        </NuxtLink> -->
-        <div class="hover:brightness-125 cursor-pointer" @click="$router.push('/')">
-          <NuxtImg src="logo.png" alt="GGHUB Logo" width="140" height="30" />
-        </div>
+        </NuxtLink>
         •
         <div class="hidden md:flex gap-6">
           <NuxtLink to="/" class="hover:text-blue-400 transition-colors font-medium"
