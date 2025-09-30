@@ -1,0 +1,47 @@
+name: Deploy GGHUB-APP (frontend) to VPS
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+
+jobs:
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd www/gghub.ru/gghub
+            git pull
+            docker compose down
+            docker compose up -d --build
+
+      - name: Notify Telegram (Success)
+        if: success()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+            -d text="✅ Деплой *GGHUB-APP (frontend)* завершён успешно на сервере.
+            GitHub Actions: ${{ github.workflow }}
+            Commit: ${{ github.sha }}" \
+            -d parse_mode=Markdown
+
+      - name: Notify Telegram (Failure)
+        if: failure()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+            -d text="❌ Ошибка при деплое *GGHUB-APP (frontend)*!
+            Проверь GitHub Actions: ${{ github.workflow }}" \
+            -d parse_mode=Markdown
