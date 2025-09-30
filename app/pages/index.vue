@@ -1,12 +1,16 @@
 <template>
-  <section class="h-screen text-blue-500 flex items-center">
-    <div class="mx-auto px-4 py-20 text-center">
+  <section class="h-screen flex items-center">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+      <source src="/videos/background.mp4" type="video/mp4" />
+    </video>
+    <div class="mx-auto px-4 py-20 text-center z-10">
       <p
-        class="text-4xl md:text-7xl font-bold max-w-3xl bg-gradient-to-b from-blue-600 via-white to-yellow-600 bg-clip-text text-transparent pb-3"
+        class="text-4xl md:text-7xl font-extrabold font-[Comfortaa] max-w-3xl bg-gradient-to-b from-blue-500 via-white to-yellow-500 bg-clip-text text-transparent pb-3"
       >
         Full-stack разработка <br />и 1С решения
       </p>
     </div>
+    <div class="absolute inset-0 bg-black/70"></div>
   </section>
 
   <section class="py-16 h-screen flex items-center">
@@ -16,25 +20,25 @@
         <div
           class="bg-gray-900/80 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
         >
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-xl font-bold mb-4 text-gray-100">Веб-разработка</h3>
+          <p class="text-gray-200">Современные full-stack приложения на Vue.js, Nuxt и Node.js</p>
+        </div>
+
+        <div
+          class="bg-gray-900/80 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
+        >
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold mb-4 text-gray-100">1С Автоматизация</h3>
+          <p class="text-gray-200">Бизнес-процессы, интеграции и доработки платформы 1С</p>
+        </div>
+
+        <div
+          class="bg-gray-900/80 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
+        >
           <div class="text-4xl mb-4">🚀</div>
-          <h3 class="text-xl font-bold mb-4 text-gray-100">Проекты</h3>
-          <p class="text-gray-200">Реальные кейсы и open-source разработки с полным кодом</p>
-        </div>
-
-        <div
-          class="bg-gray-900/80 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
-        >
-          <div class="text-4xl mb-4">📚</div>
-          <h3 class="text-xl font-bold mb-4 text-gray-100">Обучение</h3>
-          <p class="text-gray-200">Статьи, туториалы и лучшие практики для разработчиков</p>
-        </div>
-
-        <div
-          class="bg-gray-900/80 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
-        >
-          <div class="text-4xl mb-4">👥</div>
-          <h3 class="text-xl font-bold mb-4 text-gray-100">Сообщество</h3>
-          <p class="text-gray-200">Обмен опытом, код-ревью и интересные коллаборации</p>
+          <h3 class="text-xl font-bold mb-4 text-gray-100">SaaS решения</h3>
+          <p class="text-gray-200">Готовые облачные сервисы с подпиской для вашего бизнеса</p>
         </div>
       </div>
     </div>
