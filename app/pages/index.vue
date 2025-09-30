@@ -1,8 +1,16 @@
 <template>
   <section class="h-screen flex items-center">
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <video
+      ref="videoPlayer"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    >
       <source src="/videos/background.mp4" type="video/mp4" />
     </video>
+
     <div class="mx-auto px-4 py-20 text-center z-10">
       <p
         class="text-4xl md:text-7xl font-extrabold font-[Comfortaa] max-w-3xl bg-gradient-to-b from-blue-500 via-white to-yellow-500 bg-clip-text text-transparent pb-3"
@@ -10,7 +18,6 @@
         Full-stack разработка <br />и 1С решения
       </p>
     </div>
-    <div class="absolute inset-0 bg-black/70"></div>
   </section>
 
   <section class="py-16 h-screen flex items-center">
@@ -82,3 +89,17 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+interface HTMLVideoElement {
+  playbackRate: number;
+}
+
+const videoPlayer = ref<HTMLVideoElement | null>(null);
+
+onMounted(() => {
+  if (videoPlayer.value) {
+    videoPlayer.value.playbackRate = 0.75;
+  }
+});
+</script>
