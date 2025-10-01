@@ -32,27 +32,33 @@
       <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-100">Что предлагаю</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div
-          class="bg-gradient-to-tl to-violet-800/80 p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
+          class="bg-gradient-to-tl to-violet-800/80 p-4 md:p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
         >
           <div class="text-4xl mb-4">🌐</div>
-          <h3 class="text-xl font-bold mb-4 text-gray-100">Веб-разработка</h3>
-          <p class="text-gray-200">Современные full-stack приложения на Vue.js, Nuxt и Node.js</p>
+          <h3 class="text-sm md:text-xl font-bold mb-4 text-gray-100">Веб-разработка</h3>
+          <p class="text-sm md:text-xl text-gray-200">
+            Современные full-stack приложения на Vue.js, Nuxt и Node.js
+          </p>
         </div>
 
         <div
-          class="bg-gradient-to-tl to-violet-800/80 p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
+          class="bg-gradient-to-tl to-violet-800/80 p-4 md:p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
         >
           <div class="text-4xl mb-4">🤖</div>
-          <h3 class="text-xl font-bold mb-4 text-gray-100">1С Автоматизация</h3>
-          <p class="text-gray-200">Бизнес-процессы, интеграции и доработки платформы 1С</p>
+          <h3 class="text-sm md:text-xl font-bold mb-4 text-gray-100">1С Автоматизация</h3>
+          <p class="text-sm md:text-xl text-gray-200">
+            Бизнес-процессы, интеграции и доработки платформы 1С
+          </p>
         </div>
 
         <div
-          class="bg-gradient-to-tl to-violet-800/80 p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
+          class="bg-gradient-to-tl to-violet-800/80 p-4 md:p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
         >
           <div class="text-4xl mb-4">🚀</div>
-          <h3 class="text-xl font-bold mb-4 text-gray-100">SaaS решения</h3>
-          <p class="text-gray-200">Готовые облачные сервисы с подпиской для вашего бизнеса</p>
+          <h3 class="text-sm md:text-xl font-bold mb-4 text-gray-100">SaaS решения</h3>
+          <p class="text-sm md:text-xl text-gray-200">
+            Готовые облачные сервисы с подпиской для вашего бизнеса
+          </p>
         </div>
       </div>
     </div>
