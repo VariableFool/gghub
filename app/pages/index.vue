@@ -14,7 +14,7 @@
 
     <div class="mx-auto px-4 py-20 text-center z-10">
       <p
-        class="text-6xl md:text-8xl font-extrabold font-[Comfortaa] max-w-3xl bg-gradient-to-b from-blue-500 via-white to-yellow-500 bg-clip-text text-transparent pb-3"
+        class="text-4xl md:text-8xl font-extrabold font-[Comfortaa] max-w-3xl bg-gradient-to-b from-blue-500 via-white to-yellow-500 bg-clip-text text-transparent pb-3"
       >
         Full-stack разработка <br />и 1С решения
       </p>
