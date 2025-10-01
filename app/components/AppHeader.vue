@@ -30,6 +30,11 @@
           <NuxtLink to="/about" class="hover:text-violet-400 transition-colors font-medium"
             >Обо мне</NuxtLink
           >
+          •
+          <UButton
+            class="hover:text-green-400 transition-colors text-md cursor-pointer"
+            label="Войти"
+          />
         </div>
 
         <button class="md:hidden text-white">
