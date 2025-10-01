@@ -1,6 +1,6 @@
 <template>
   <start-button :onClick="scrollToNext" :button-text="startButtonText" />
-  <section id="section1" class="h-screen flex items-center">
+  <section id="section1" class="h-dvh flex items-center">
     <video
       ref="videoPlayer"
       autoplay
@@ -21,7 +21,7 @@
     </div>
   </section>
 
-  <section id="section2" class="py-16 h-screen flex items-center">
+  <section id="section2" class="py-16 h-dvh flex items-center">
     <div class="wave">
       <span></span>
       <span></span>
