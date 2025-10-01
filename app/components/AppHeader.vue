@@ -2,7 +2,7 @@
   <nav
     class="bg-gray-900/80 backdrop-blur-sm shadow-lg fixed mt-4 rounded-full ring-1 ring-gray-700 left-1/2 -translate-x-1/2 z-20"
   >
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-6 font-[Inter]">
       <div class="flex justify-between items-center py-4 gap-6">
         <NuxtLink
           to="/"
@@ -12,7 +12,10 @@
         </NuxtLink>
         •
         <div class="hidden md:flex gap-6">
-          <NuxtLink to="/" class="hover:text-red-400 transition-colors font-medium"
+          <NuxtLink
+            to="/"
+            class="hover:text-red-400 transition-colors font-medium"
+            @click="scrollToTop"
             >Главная</NuxtLink
           >
           •
@@ -43,3 +46,9 @@
     </div>
   </nav>
 </template>
+
+<script setup lang="ts">
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+</script>
