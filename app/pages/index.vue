@@ -29,7 +29,7 @@
     </div>
 
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-100">Что предлагаю</h2>
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-100">Что предлагаю</h1>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div
           class="bg-gradient-to-tl to-violet-800/80 p-4 md:p-8 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
@@ -69,9 +69,9 @@
       <technology-b-g />
     </div>
     <div class="container mx-auto px-4 relative">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-100">
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-100">
         Стек технологий
-      </h2>
+      </h1>
       <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
         <span
           class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors"
@@ -110,7 +110,9 @@
 const sections = ['section1', 'section2', 'section3'];
 const currentIndex = ref(0);
 const startButtonText = computed(() => {
-  if (currentIndex.value === 2) {
+  if (currentIndex.value === 0) {
+    return 'Начать ↓';
+  } else if (currentIndex.value === 2) {
     return 'В начало ↑';
   } else {
     return 'Продолжить ↓';
