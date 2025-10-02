@@ -11,49 +11,63 @@
           GGHUB
         </NuxtLink>
         •
-        <div class="hidden md:flex gap-6">
+        <div class="hidden md:flex gap-9">
           <NuxtLink
-            to="/"
-            class="hover:text-red-400 transition-colors font-medium"
-            @click="scrollToTop"
-            >Главная</NuxtLink
+            v-for="item in items"
+            :to="item.href"
+            :class="item.class"
+            @click="item.onClick && item.onClick()"
           >
-          •
-          <NuxtLink to="/projects" class="hover:text-yellow-400 transition-colors font-medium"
-            >Проекты</NuxtLink
-          >
-          •
-          <NuxtLink to="/blog" class="hover:text-blue-400 transition-colors font-medium"
-            >Блог</NuxtLink
-          >
-          •
-          <NuxtLink to="/about" class="hover:text-violet-400 transition-colors font-medium"
-            >Обо мне</NuxtLink
-          >
-          •
-          <UButton
-            class="hover:text-green-400 transition-colors text-md cursor-pointer"
-            label="Войти"
-          />
+            {{ item.label }}
+          </NuxtLink>
         </div>
 
-        <button class="md:hidden text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
+        <div class="md:hidden">
+          <MobileMenu :items="items" />
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
+import type { DropdownMenuItem } from '@nuxt/ui';
+
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+const items = ref<DropdownMenuItem[]>([
+  {
+    label: 'Главная',
+    href: '/',
+    onClick: scrollToTop,
+    class: 'hover:text-blue-400',
+    icon: 'i-lucide-home',
+  },
+  {
+    label: 'Проекты',
+    href: '/projects',
+    class: 'hover:text-violet-400',
+    icon: 'i-lucide-briefcase',
+  },
+  {
+    label: 'Блог',
+    href: '/blog',
+    class: 'hover:text-orange-400',
+    icon: 'i-lucide-book-open',
+  },
+  {
+    label: 'Обо мне',
+    href: '/about',
+    class: 'hover:text-red-400',
+    icon: 'i-lucide-user',
+  },
+  {
+    label: 'Войти',
+    href: '/login',
+    class: 'hover:text-green-400',
+    icon: 'i-lucide-log-in',
+  },
+]);
 </script>
