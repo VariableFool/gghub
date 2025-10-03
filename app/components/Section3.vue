@@ -3,7 +3,12 @@
     <technology-b-g />
   </div>
   <div class="container mx-auto px-4 relative">
-    <h1 class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-100">Стек технологий</h1>
+    <h1
+      class="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-100"
+      style="text-shadow: 2px 2px 0 #ec4899"
+    >
+      Стек технологий
+    </h1>
     <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
       <span
         class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors"

@@ -10,6 +10,6 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'GGHUB - Платформа для разработчиков и технологических энтузиастов',
+  title: 'GGHUB',
 });
 </script>
