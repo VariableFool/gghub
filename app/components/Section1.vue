@@ -1,5 +1,5 @@
 <template>
-  <video
+  <!-- <video
     ref="videoPlayer"
     autoplay
     muted
@@ -8,13 +8,23 @@
     class="absolute top-0 left-0 w-dvw h-dvh object-cover"
   >
     <source src="/videos/background.mp4" type="video/mp4" />
-  </video>
+  </video> -->
 
-  <div class="mx-auto px-4 py-20 text-center z-10">
+  <section1-b-g />
+
+  <div class="mx-auto px-4 text-center z-10">
     <p
-      class="text-4xl md:text-8xl font-extrabold font-[Comfortaa] max-w-3xl bg-gradient-to-b from-blue-500 via-white to-yellow-500 bg-clip-text text-transparent pb-3"
+      class="text-5xl md:text-8xl text-center text-gray-200 drop-shadow-[0_0_25px_rgba(56,189,248,0.6)] [text-shadow:0_0_15px_rgba(236,72,153,0.4)] tracking-tight maintext"
     >
-      Full-stack разработка <br />и 1С решения
+      Full-stack<br />
+      разработка<br />
+      и 1С решения
     </p>
   </div>
 </template>
+
+<style scoped>
+.maintext {
+  font-family: 'Tinos', sans-serif;
+}
+</style>

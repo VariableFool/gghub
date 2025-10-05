@@ -2,7 +2,7 @@
   <div class="z-50 fixed bottom-20 left-1/2 transform -translate-x-1/2 my-shadow">
     <button
       @click="props.onClick"
-      class="py-8 px-10 rounded-2xl bg-cyan-200 text-sm md:text-xl text-pink-700 start-button shake-animation transition-all"
+      class="py-8 px-10 rounded-2xl bg-violet-800 text-sm md:text-xl text-white start-button shake-animation transition-all"
     >
       {{ props.buttonText }}
     </button>
@@ -24,7 +24,7 @@ const props = defineProps<{
 }
 
 .my-shadow {
-  filter: drop-shadow(10px 5px 0px rgb(255, 0, 157));
+  filter: drop-shadow(10px 5px 0px rgb(204, 0, 255));
 }
 
 .shake-animation {
@@ -60,6 +60,5 @@ const props = defineProps<{
 .start-button:hover {
   animation: none;
   transform: scale(1.1);
-  background: #7ee7fc;
 }
 </style>

@@ -22,7 +22,6 @@
         <div
           class="absolute inset-0 transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
         >
-          <!-- Передняя сторона -->
           <div
             class="absolute inset-0 bg-gradient-to-tl to-violet-800/80 p-6 rounded-xl shadow-lg shadow-violet-800/50 text-center ring-1 ring-violet-600 flex flex-col items-center justify-center [backface-visibility:hidden]"
           >
@@ -35,7 +34,6 @@
             </p>
           </div>
 
-          <!-- Задняя сторона -->
           <div
             class="absolute inset-0 bg-gradient-to-br from-pink-600/80 to-fuchsia-800/80 p-6 rounded-xl shadow-lg shadow-pink-800/50 text-center ring-1 ring-pink-600 flex flex-col items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden]"
           >
