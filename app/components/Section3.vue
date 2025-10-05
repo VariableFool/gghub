@@ -1,6 +1,6 @@
 <template>
   <div class="absolute left-0 w-full h-full overflow-hidden -z-30">
-    <technology-b-g />
+    <section3-b-g />
   </div>
   <div class="container mx-auto px-4 relative">
     <h1

@@ -12,7 +12,7 @@
 
   <section1-b-g />
 
-  <div class="mx-auto px-4 text-center z-10">
+  <div class="mx-auto text-center z-10">
     <p
       class="text-5xl md:text-8xl text-center text-gray-200 drop-shadow-[0_0_25px_rgba(56,189,248,0.6)] [text-shadow:0_0_15px_rgba(236,72,153,0.4)] tracking-tight maintext"
     >

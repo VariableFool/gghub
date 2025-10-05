@@ -2,17 +2,24 @@
 
 let canvas, ctx, mousePos;
 let points = [];
-const maxDist = 600;
+let pointsAmount = 80;
+let maxDist = 300;
 const colour = '255,30,155';
 
-export function init() {
+export function init(dist, amount) {
+  if (points.length > 0) {
+    destroy();
+  }
+
+  maxDist = dist;
+  pointsAmount = amount;
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
   canvas.addEventListener('mousemove', (evt) => {
     mousePos = getMousePos(canvas, evt);
   });
   resizeCanvas();
-  generatePoints(80);
+  generatePoints(pointsAmount);
   pointFun();
   setInterval(pointFun, 16);
   window.addEventListener('resize', resizeCanvas, false);
@@ -28,6 +35,7 @@ function point() {
 }
 
 function generatePoints(amount) {
+  if (amount > 80) return;
   for (let i = 0; i < amount; i++) {
     new point();
   }
@@ -79,7 +87,7 @@ function collision(obj, dist) {
   }
 }
 
-function resizeCanvas() {
+export function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   pointFun();
@@ -91,4 +99,12 @@ function getMousePos(cvs, evt1) {
     x: evt1.clientX - rect.left,
     y: evt1.clientY - rect.top,
   };
+}
+
+function destroy() {
+  points = [];
+  mousePos = null;
+  window.removeEventListener('resize', resizeCanvas, false);
+  canvas.removeEventListener('mousemove', getMousePos, false);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 }

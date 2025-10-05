@@ -6,7 +6,9 @@
 import { init } from '../../public/js/sections1-legacy.js';
 
 onMounted(() => {
-  init();
+  const maxDist = window.innerWidth < 768 ? 200 : 400;
+  const pointsAmount = window.innerWidth < 768 ? 40 : 80;
+  init(maxDist, pointsAmount);
 });
 </script>
 
