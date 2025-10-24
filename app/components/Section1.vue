@@ -3,7 +3,7 @@
 
   <div class="mx-auto text-center z-10">
     <p
-      class="text-5xl md:text-8xl text-center text-gray-200 drop-shadow-[0_0_25px_rgba(56,189,248,0.6)] [text-shadow:0_0_15px_rgba(236,72,153,0.4)] tracking-tight maintext"
+      class="text-5xl md:text-9xl text-center bg-gradient-to-r from-violet-500 via-pink-500 to-red-500 bg-clip-text text-transparent maintext"
     >
       Full-stack<br />
       разработка<br />
@@ -14,6 +14,7 @@
 
 <style scoped>
 .maintext {
-  font-family: 'Tinos', sans-serif;
+  font-family: 'Tektur', sans-serif;
+  user-select: none;
 }
 </style>
