@@ -1,8 +1,10 @@
-<template>About</template>
+<template>
+  <div class="h-[calc(100dvh-88px)] pt-32">about</div>
+</template>
 
 <script setup>
 useSeoMeta({
-  title: 'О нас - GGHub',
-  description: 'Узнайте больше о миссии GGHub, наших технологиях и команде',
+  title: 'Обо мне',
+  description: 'Страница обо мне',
 });
 </script>

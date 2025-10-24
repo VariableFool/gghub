@@ -1,15 +1,4 @@
 <template>
-  <!-- <video
-    ref="videoPlayer"
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute top-0 left-0 w-dvw h-dvh object-cover"
-  >
-    <source src="/videos/background.mp4" type="video/mp4" />
-  </video> -->
-
   <section1-b-g />
 
   <div class="mx-auto text-center z-10">
