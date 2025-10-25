@@ -1,5 +1,5 @@
 <template>
-  <canvas id="canvas" class="canvas w-dvw h-dvh"></canvas>
+  <canvas id="canvas" class="canvas w-full h-dvh"></canvas>
 </template>
 
 <script setup>

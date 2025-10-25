@@ -1,64 +1,37 @@
+<script setup lang="ts">
+onMounted(() => {
+  document.querySelectorAll<HTMLAnchorElement>('a').forEach((btn) => {
+    btn.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX * 3 - rect.left;
+      btn.style.setProperty('--x', `${x}deg`);
+    });
+  });
+});
+</script>
+
 <template>
-  <div class="z-50 fixed bottom-20 left-1/2 transform -translate-x-1/2 my-shadow">
-    <button
-      @click="props.onClick"
-      class="py-8 px-10 rounded-2xl bg-violet-800 text-sm md:text-xl text-white start-button shake-animation transition-all"
+  <div class="z-50 fixed bottom-36 left-1/2 transform -translate-x-1/2">
+    <a
+      href="#"
+      class="relative w-[150px] h-[35px] inline-block rounded-full [&>i]:absolute [&>i]:inset-[-2px] [&>i]:block [&>i]:rounded-full"
     >
-      {{ props.buttonText }}
-    </button>
+      <i></i><i></i>
+      <span
+        class="absolute top-0 left-0 w-full h-full rounded-full flex justify-center items-center bg-[rgba(14,21,56,0.65)] uppercase text-white tracking-[2px]"
+        >Начать</span
+      >
+    </a>
   </div>
 </template>
 
-<script setup lang="ts">
-const props = defineProps<{
-  onClick?: () => void;
-  buttonText?: string;
-}>();
-</script>
-
 <style scoped>
-.start-button {
-  cursor: pointer;
-  clip-path: polygon(0 33%, 100% 16%, 85% 75%, 12% 66%);
-  font-weight: 900;
+a i,
+a i:nth-child(2) {
+  background: linear-gradient(var(--x), #e347ff, transparent, transparent, #ff5c50);
 }
 
-.my-shadow {
-  filter: drop-shadow(10px 5px 0px rgb(204, 0, 255));
-}
-
-.shake-animation {
-  animation: buttonShake 2s ease-in-out infinite;
-}
-
-@keyframes buttonShake {
-  0%,
-  100% {
-    transform: translateX(0) rotate(0deg);
-  }
-  2%,
-  18% {
-    transform: translateX(-3px) rotate(-1deg);
-  }
-  4%,
-  16% {
-    transform: translateX(3px) rotate(1deg);
-  }
-  6%,
-  14% {
-    transform: translateX(-2px) rotate(-0.5deg);
-  }
-  8%,
-  12% {
-    transform: translateX(2px) rotate(0.5deg);
-  }
-  10% {
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-.start-button:hover {
-  animation: none;
-  transform: scale(1.1);
+a i:nth-child(2) {
+  filter: blur(10px);
 }
 </style>

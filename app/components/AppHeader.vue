@@ -38,7 +38,7 @@ const items = ref<DropdownMenuItem[]>([
 
 <template>
   <nav
-    class="bg-gray-900/30 backdrop-blur-sm shadow-lg absolute md:fixed mt-4 rounded-full ring-1 ring-gray-700 left-1/2 -translate-x-1/2 z-20"
+    class="bg-gray-900/30 backdrop-blur-sm shadow-lg absolute md:fixed mt-4 rounded-full ring-1 ring-gray-700 left-1/2 transform -translate-x-1/2 z-20"
   >
     <div class="container mx-auto px-6 font-[Inter]">
       <div class="flex justify-between items-center py-4 gap-6">

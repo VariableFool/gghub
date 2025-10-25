@@ -1,15 +1,7 @@
 <template>
   <start-button :onClick="scrollToNext" :button-text="startButtonText" />
-  <section id="section1" class="h-dvh flex items-center">
+  <section id="section1" class="w-full">
     <section1 />
-  </section>
-
-  <section id="section2" class="py-16 h-dvh flex items-center">
-    <section2 />
-  </section>
-
-  <section id="section3" class="py-16 h-[calc(100dvh-88px)] flex items-center">
-    <section3 />
   </section>
 </template>
 

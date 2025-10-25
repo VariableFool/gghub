@@ -1,11 +1,10 @@
 <template>
-  <div class="min-h-dvh flex flex-col">
-    <AppHeader />
-    <main class="flex-1 w-full lg:container mx-auto">
-      <slot />
-    </main>
-    <AppFooter />
-  </div>
+  <AppHeader />
+  <Section1BG />
+  <main class="w-[100vw] flex">
+    <slot />
+  </main>
+  <AppFooter />
 </template>
 
 <script setup lang="ts">
